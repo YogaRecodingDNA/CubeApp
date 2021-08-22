@@ -1,5 +1,4 @@
-const mongoose = require('mongoose');
-const Accessory = require('../models/Accessory');
+const Accessory = require('../../models/Accessory');
 
 module.exports = function (req, res) {
 

@@ -1,6 +1,4 @@
-const mongoose = require('mongoose');
-
-module.exports = function (req, res, next) {
+module.exports = function (req, res) {
 
     res.render("createAccessory");
     

@@ -2,7 +2,9 @@ const mongoose = require('mongoose');
 
 module.exports = function (req, res) {
 
-    res.render("about");
+    const loggedIn = req.cookies.loggedIn;
+
+    res.render("about", {loggedIn});
 
 };
 
