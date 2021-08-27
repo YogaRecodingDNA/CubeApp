@@ -1,3 +1,104 @@
 [
+    {
+        "Cubes": {
+            "1": {
+                "name": "Eco-Dark",
+                "description": "Magnets will not drop, and their positions will be more precise with the Magnets-Snap-On design. With the use of 3mm*2mm magnets, the handfeel will be more stable and more comfortable. P.S. This design is brand new.",
+                "imageUrl": "https://thingsidesire.com/wp-content/uploads/2018/06/Eco-Dark-Rubik%E2%80%99s-Cube2.jpg",
+                "difficultyLevel": "5"
+            },
+            "2": {
+                "name": "CosmiCube",
+                "description": "Magnets will not drop, and their positions will be more precise with the Magnets-Snap-On design. With the use of 3mm*2mm magnets, the handfeel will be more stable and more comfortable. P.S. This design is brand new.",
+                "imageUrl": "https://m.media-amazon.com/images/I/61MoqpSf2qL._AC_SL1050_.jpg",
+                "difficultyLevel": "4"
+            },
+            "3": {
+                "name": "Ratchet Cube",
+                "description": "Magnets will not drop, and their positions will be more precise with the Magnets-Snap-On design. With the use of 3mm*2mm magnets, the handfeel will be more stable and more comfortable. P.S. This design is brand new.",
+                "imageUrl": "https://m.media-amazon.com/images/I/71ueVZKxY8L._AC_SL1000_.jpg",
+                "difficultyLevel": "6"
+            },
+            "4": {
+                "name": "Cuber Speed Ghost",
+                "description": "Magnets will not drop, and their positions will be more precise with the Magnets-Snap-On design. With the use of 3mm*2mm magnets, the handfeel will be more stable and more comfortable. P.S. This design is brand new.",
+                "imageUrl": "https://m.media-amazon.com/images/I/71pKnlCyxFL._AC_SL1200_.jpg",
+                "difficultyLevel": "3"
+            },
+            "5": {
+                "name": "Astra Cube",
+                "description": "Magnets will not drop, and their positions will be more precise with the Magnets-Snap-On design. With the use of 3mm*2mm magnets, the handfeel will be more stable and more comfortable. P.S. This design is brand new.",
+                "imageUrl": "https://i5.walmartimages.com/asr/a5f03666-fead-4feb-a41d-d140dee25acf_1.b298f0f741806cc8c282ec9b3b07d60a.jpeg",
+                "difficultyLevel": "2"
+            },
+            "6": {
+                "name": "Time Machine Cube",
+                "description": "Magnets will not drop, and their positions will be more precise with the Magnets-Snap-On design. With the use of 3mm*2mm magnets, the handfeel will be more stable and more comfortable. P.S. This design is brand new.",
+                "imageUrl": "https://m.media-amazon.com/images/I/51pK6FrRkVL._AC_SS450_.jpg",
+                "difficultyLevel": "6"
+            },
+            "7": {
+                "name": "Eco-dark",
+                "description": "Magnets will not drop, and their positions will be more precise with the Magnets-Snap-On design. With the use of 3mm*2mm magnets, the handfeel will be more stable and more comfortable. P.S. This design is brand new.",
+                "imageUrl": "Eco-dark",
+                "difficultyLevel": "Eco-dark"
+            },
+            "8": {
+                "name": "Secret Temple Cube",
+                "description": "Discovered deep below the surface of Antarctica, inside an ancient temple built by extra terrestrials.",
+                "imageUrl": "https://m.media-amazon.com/images/I/515MHlWwOBL._AC_UX679_.jpg",
+                "difficultyLevel": "6"
+            }
+
+        },
+        "Accessories": {
+            "1": {
+                "name": "Peeking Monk Boy",
+                "description": "Peeking monk boy says meditating with your eyes closed opens the inner eye for a sneak peek at what your next 5 moves should be....but that works only after you take 5 prolonged dragon breaths.",
+                "imageUrl": "https://images.all-free-download.com/images/graphiclarge/thai_monk_vector_6815910.jpg"
+            },
+            "2": {
+                "name": "Roof of the World",
+                "description": "Get the bird’s eye view.. see the big picture.. sail through Tibetan clouds where the sky is higher, and teaches you how to fly through your cubesperience.",
+                "imageUrl": "https://cdn.decoratorist.com/wp-content/uploads/chinese-clouds-vector-art-stock-184196.jpg"
+            },
+            "3": {
+                "name": "Bodhisattva Hands",
+                "description": "Bodhisattva is enlightened but stays behind to help others. Bodhisattva hands hold the key and hand it to you if you reach.",
+                "imageUrl": "https://i.pinimg.com/originals/63/21/87/632187375162a9bad2e85c699d7d5aff.png"
+            },
+            "4": {
+                "name": "Silver",
+                "description": "There but not really",
+                "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTHADtW9nMNIO9c3KTdsUlmtf9t5KDHi5-CVtgW5XohynyawnFUqt-enFcIQQuGl--fBs&usqp=CAU"
+            },
+            "5": {
+                "name": "BraddahZilla",
+                "description": "The Tsunami King shredder himself says to charge at the energy full speed and only look back if you intend to shred the gnar.",
+                "imageUrl": "https://svgtrendy.com/wp-content/uploads/2020/10/godzilla.jpg"
+            },
+            "6": {
+                "name": "Wahine",
+                "description": "She’ll surf the cubes with you any time any day.",
+                "imageUrl": "https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/sunset-surf-girl-carl-gouveia.jpg"
+            },
+            "7": {
+                "name": "Patanjali",
+                "description": "The father of modern yoga documented an outline of the venerable life-enhancing practice.",
+                "imageUrl": "https://i.pinimg.com/originals/8a/09/1b/8a091ba1e2a9e97726fe6eb85f0ada67.jpg"
+            },
+            "8": {
+                "name": "Party Yak",
+                "description": "Party Yak stays high... like in the Himalayas... you want some? Party yak gotta sack full of goods. Get high on life the best ways you know how and cube.",
+                "imageUrl": "https://static.vecteezy.com/system/resources/thumbnails/000/171/668/small/Tibetan_Yak.jpg"
+            },
+            "9": {
+                "name": "Bali Vibes",
+                "description": "Take orbit and chill as the cube rotates naturally.",
+                "imageUrl": "https://images.all-free-download.com/images/graphiclarge/temple_of_bali_6821083.jpg"
+            }
+
+        }
+    }
     
 ]

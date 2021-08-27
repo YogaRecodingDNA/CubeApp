@@ -3,7 +3,10 @@
  module.exports = function(req, res, next) {
      
     const currentPath = req.route.path;
+
     const loggedIn = req.cookies.loggedIn;
+    
+    const about = '/about';
     const details = '/details/:id';
     const home = '/';
      
@@ -19,7 +22,7 @@
 
             next();
 
-        } else if (!loggedIn && (currentPath == home || currentPath == details)){
+        } else if (!loggedIn && (currentPath == home || currentPath == details || currentPath == about)){
 
             next();
 

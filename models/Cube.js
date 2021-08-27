@@ -8,11 +8,11 @@ const cubeSchema = new Schema({
     description: String,
     imageUrl: String,
     difficultyLevel: Number,
-    accessory: [{type: Schema.Types.ObjectId, ref: 'Accessory'}],// Phase 2 addition
-    creatorId: {type: Schema.Types.ObjectId, ref: 'User', required: true},//  Phase 3 addition
+    accessory: [{type: Schema.Types.ObjectId, ref: 'Accessory'}],
+    creatorId: {type: Schema.Types.ObjectId, ref: 'User', required: true},
 });
 
 const Cube = mongoose.model('Cube', cubeSchema);
-// Mongo takes the first arg 'Cube' and names the collection 'cubes'
+// Mongo takes the first arg 'Cube' and names the collection 'cubes'.
 
 module.exports = Cube;

@@ -1,63 +1,52 @@
-const AuthMidware = require('../Middleware/AuthorizingMidware');
-const AboutCONT = require('../controllers/AboutCONT');
-const AttachAccessCONT = require('../controllers/Attach/AttachAccessCONT');
-const AttachAccessCONT_POST = require('../controllers/Attach/AttachAccessCONT_POST');
-const CreateCONT = require('../controllers/Create/CreateCONT');
-const CreateCONT_POST = require('../controllers/Create/CreateCONT_POST');
-const CreateAccessCONT = require('../controllers/Accessory/CreateAccessCONT');
-const CreateAccessCONT_POST = require('../controllers/Accessory/CreateAccessCONT_POST');
-const DetailsCONT = require('../controllers/DetailsCONT');
-const EditCONT = require('../controllers/Edit/EditCONT');
-const EditCONT_POST = require('../controllers/Edit/EditCONT_POST');
-const DeleteCONT = require('../controllers/Delete/DeleteCONT');
-const DeleteCONT_FINAL = require('../controllers/Delete/DeleteCONT_FINAL');
-const HomepageCONT = require('../controllers/HomepageCONT');
-const LoginCONT = require('../controllers/Login/LoginCONT');
-const LoginCONT_POST = require('../controllers/Login/LoginCONT_POST');
-const LogoutCONT = require('../controllers/LogoutCONT');
-const RegisterCONT = require('../controllers/Register/RegisterCONT');
-const RegisterCONT_POST = require('../controllers/Register/RegisterCONT_POST');
-const _404CONT = require('../controllers/_404CONT');
+// Middleware
+const authorization = require('../Middleware/authorization');
+const validation = require('../Middleware/validation');
+// Controllers
+const entryControllers = require('../controllers/register-login-logoutControllers');
+const cubeControllers = require('../controllers/cubeControllers');
+const accessoryControllers = require('../controllers/accessoryControllers');
+const controller404 = require('../controllers/controller404');
 
+// Routes
 module.exports = (app) => {
     
-    app.get('/', AuthMidware, HomepageCONT);
+    app.get('/', authorization, cubeControllers.home);
 
-    app.get('/about', AuthMidware, AboutCONT);
+    app.get('/about', authorization, entryControllers.about);
     
-    app.get('/create', AuthMidware, CreateCONT);
+    app.get('/create', authorization, cubeControllers.create);
 
-    app.post('/create', AuthMidware, CreateCONT_POST);
+    app.post('/create', validation.create, authorization, cubeControllers.createPOST);
     
-    app.get('/create/accessory', AuthMidware, CreateAccessCONT); // Phase 2 addition
+    app.get('/create/accessory', authorization, accessoryControllers.createAccessory);
 
-    app.post('/create/accessory', AuthMidware, CreateAccessCONT_POST); // Phase 2 addition
+    app.post('/create/accessory', validation.create, authorization, accessoryControllers.createAccessoryPOST);
     
-    app.get('/details/:id', AuthMidware, DetailsCONT);
+    app.get('/details/:id', authorization, cubeControllers.details);
 
-    app.get('/attach/accessory/:id', AuthMidware, AttachAccessCONT); // Phase 2 addition
+    app.get('/attach/accessory/:id', authorization, accessoryControllers.attachAccessory);
 
-    app.post('/attach/accessory/:id', AttachAccessCONT_POST); // Phase 2 addition
+    app.post('/attach/accessory/:id', authorization, accessoryControllers.attachAccessoryPOST);
 
-    app.get('/edit/:id', AuthMidware, EditCONT); // Phase 3 addition
+    app.get('/edit/:id', authorization, cubeControllers.edit);
 
-    app.post('/edit/:id', AuthMidware, EditCONT_POST); // Phase 3 addition
+    app.post('/edit/:id', validation.edit, authorization, cubeControllers.editPOST);
 
-    app.get('/delete/:id', AuthMidware, DeleteCONT); // Phase 3 addition
+    app.get('/delete/:id', authorization, cubeControllers.delete);
 
-    app.post('/delete/:id', AuthMidware, DeleteCONT_FINAL); // Phase 3 addition
+    app.post('/delete/:id', authorization, cubeControllers.deletePOST);
 
-    app.get('/login', LoginCONT); // Phase 3 addition
+    app.get('/login', entryControllers.login);
 
-    app.post('/login', LoginCONT_POST); // Phase 3 addition
+    app.post('/login', validation.login, entryControllers.loginPOST);
 
-    app.get('/register', RegisterCONT); // Phase 3 addition
+    app.get('/register', entryControllers.register);
 
-    app.post('/register', RegisterCONT_POST); // Phase 3 addition
+    app.post('/register', validation.register, entryControllers.registerPOST);
 
-    app.get('/logout', AuthMidware, LogoutCONT); // Phase 3 addition
+    app.get('/logout', authorization, entryControllers.logout);
 
-    app.get('/*', _404CONT);
+    app.get('/*', controller404);
 
 };
 
@@ -80,14 +69,33 @@ module.exports = (app) => {
 
 
 
+// const CreateCONT = require('../controllers/Create/CreateCONT');
+// const CreateCONT_POST = require('../controllers/Create/CreateCONT_POST');
+// const DetailsCONT = require('../controllers/DetailsCONT');
+// const EditCONT = require('../controllers/Edit/EditCONT');
+// const EditCONT_POST = require('../controllers/Edit/EditCONT_POST');
+// const DeleteCONT = require('../controllers/Delete/DeleteCONT');
+// const DeleteCONT_FINAL = require('../controllers/Delete/DeleteCONT_FINAL');
+// const HomepageCONT = require('../controllers/HomepageCONT');
 
-/* 
 
-const jwt = require('jsonwebtoken');
-const bcrypt = require('bcrypt');
-const mongoose = require('mongoose');
-const User = require('../models/User');
-const Cube = require('../models/Cube');
-const Accessory = require('../models/Accessory');
 
-*/
+// const CreateAccessCONT = require('../controllers/Accessory/CreateAccessCONT');
+// const CreateAccessCONT_POST = require('../controllers/Accessory/CreateAccessCONT_POST');
+// const AttachAccessCONT = require('../controllers/Attach/AttachAccessCONT');
+// const AttachAccessCONT_POST = require('../controllers/Attach/AttachAccessCONT_POST');
+
+
+
+// const AboutCONT = require('../controllers/AboutCONT');
+
+// const validationCreate = require('../Middleware/validationCreate');
+// const validationLogin = require('../Middleware/validationLogin');
+// const validationRegister = require('../Middleware/validationRegister');
+
+
+// const LoginCONT = require('../controllers/Login/LoginCONT');
+// const LoginCONT_POST = require('../controllers/Login/LoginCONT_POST');
+// const LogoutCONT = require('../controllers/LogoutCONT');
+// const RegisterCONT = require('../controllers/Register/RegisterCONT');
+// const RegisterCONT_POST = require('../controllers/Register/RegisterCONT_POST');

@@ -14,15 +14,22 @@
             <ul>
                 <li><img class="logo" src="/images/logo.png"></li>
                 <li><a href="/">Browse</a></li>
-                <li><a href="/create">Add a Cube</a></li>
-                <li><a href="/">Add Accessory</a></li>
                 <li><a href="/about">About</a></li>
+                {{#if loggedIn}}
+                <li><a href="/create">Add a Cube</a></li>
+                <li><a href="/logout">Logout</a></li>
+                {{/if}}
             </ul>
         </header>
+        {{#if notification}}
+        <div id="notifications">
+          <p id="notification-message">{{notification}}</p>
+        </div>
+        {{/if}}
         <main>
             <h1>Create Accessory</h1>
             <div class="form">
-                <form action="" method="POST">
+                <form action="/create/accessory" method="POST">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name">
                     <label for="name">Description</label>
