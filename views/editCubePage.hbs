@@ -20,11 +20,16 @@
         <li><a href="/logout">Logout</a></li>
       </ul>
     </header>
+    {{#if notification}}
+    <div id="notifications">
+      <p id="notification-message">{{notification}}</p>
+    </div>
+    {{/if}}
     <main>
 	<h1>Edit Cube</h1>
 <div class="form">
-  <form action='' method="POST">
     {{#with cube}}
+  <form action='/edit/{{_id}}' method="POST">
     <label for="name">Name</label>
     <input type="text" id="name" name="name" value="{{name}}">
     <label for="name">Description</label>
