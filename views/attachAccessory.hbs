@@ -28,13 +28,13 @@
         <form action='' method="POST">
           <label for="accessory">Accessories</label>
           <select id="accessory" name="accessory">
-      {{#each response}}
+      {{#each accessories}}
             <option value="{{name}}">{{name}}</option>
       {{/each}}
           </select>
           <input type="submit" value="Attach">
         </form>
-        {{#if attachedAcc}}
+        {{#if manageAttached}}
         <h3 class="italic">This cube has all available accessories so far or there is no available at all...
         </h3>
         {{/if}}

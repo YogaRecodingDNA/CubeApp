@@ -1,13 +1,12 @@
 const env = process.env.NODE_ENV || 'development';
 const mongoose = require('mongoose');
 const config = require('./config/config')[env];
+require('dotenv').config();
 const app = require('express')();
 require('./config/express')(app);
 require('./config/routes')(app);
-// require('./controllers/CreateController')(app);
-// require('./controllers/CreateAccessoryController')(app);
 
-mongoose.connect('mongodb+srv://kingslander:kingsland2021@cubes.mlich.mongodb.net/Cubicle?retryWrites=true&w=majority',  { 
+mongoose.connect( process.env.DB_CONN, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });

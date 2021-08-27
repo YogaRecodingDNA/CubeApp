@@ -1,6 +1,7 @@
 const express = require('express');
 const exp_hbs = require('express-handlebars');
 const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 
 module.exports = (app) => {
     
@@ -19,8 +20,12 @@ module.exports = (app) => {
     //TODO: Setup the body parser
     app.use(bodyParser.urlencoded({extended: true}));
 
+    // app.use(jwt());
+    app.use(cookieParser());
+
     //TODO: Setup the static files
     app.use(express.static('static'));
+
 
 };
 
